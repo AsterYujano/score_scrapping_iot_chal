@@ -4,13 +4,9 @@ import time
 from bs4 import BeautifulSoup
 import re
 
-# comment ... I should sleep now :(
-
 domain_name = 'https://www.iotchallengekeysight.com'
 project_urls = []
 votes = []
-
-#browse through pages
 
 print('---------------------------------------')
 print('-  Starting project URL gathering...  -')
@@ -51,7 +47,9 @@ for project_url in project_urls:
 	votes.append(vote)
 print('[o] Complete')
 print()
-print('Highest : ' + str(max(votes) + 'votes')
-print('Lowest : ' + str(max(votes) + 'votes')
-print()
+print('Highest : ' + str(max(votes)) + 'votes')
+print('Lowest : ' + str(max(votes)) + 'votes')
+print('non-sorted:')
 print(votes)
+print('sorted:')
+print(votes.sort())
