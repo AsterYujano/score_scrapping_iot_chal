@@ -49,7 +49,11 @@ print('[o] Complete')
 print()
 print('Highest : ' + str(max(votes)) + 'votes')
 print('Lowest : ' + str(max(votes)) + 'votes')
-print('non-sorted:')
+print('votes :')
 print(votes)
-print('sorted:')
-print(votes.sort())
+
+sum = 0
+for vote in votes:
+	sum = sum + vote
+result = sum / len(votes)
+print(result)
