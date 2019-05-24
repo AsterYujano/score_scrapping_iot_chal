@@ -52,7 +52,7 @@ print(votes)
 print()
 
 print('Highest : ' + str(max(votes)) + 'votes')
-print('Lowest : ' + str(max(votes)) + 'votes')
+print('Lowest : ' + str(min(votes)) + 'votes')
 
 sum = 0
 for vote in votes:
