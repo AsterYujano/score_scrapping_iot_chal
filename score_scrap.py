@@ -47,13 +47,15 @@ for project_url in project_urls:
 	votes.append(vote)
 print('[o] Complete')
 print()
-print('Highest : ' + str(max(votes)) + 'votes')
-print('Lowest : ' + str(max(votes)) + 'votes')
 print('votes :')
 print(votes)
+print()
+
+print('Highest : ' + str(max(votes)) + 'votes')
+print('Lowest : ' + str(max(votes)) + 'votes')
 
 sum = 0
 for vote in votes:
 	sum = sum + vote
 result = sum / len(votes)
-print(result)
+print('average vote number per project : ', result)
