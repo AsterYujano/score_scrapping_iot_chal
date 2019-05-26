@@ -25,6 +25,7 @@ for page in range(0, 180, 12):
 		project_urls.append(link_url)
 		#time.sleep(0.5)
 print('[o] Complete')
+print('[!] Projects number: ', len(project_urls))
 
 print('-------------------------------')
 print('-  Starting Vote fetching...  -')
@@ -45,8 +46,12 @@ for project_url in project_urls:
 	vote_string = header.find('h5').text
 	vote = int(re.sub("[^0-9]", "", vote_string))
 	votes.append(vote)
+	if 'air-sound-pollution-monitoring-for-sports-and-open-data-use-case' in url:
+		print('[!] our project has: ', vote)
+
 print('[o] Complete')
 print()
+votes.sort()
 print('votes :')
 print(votes)
 print()
