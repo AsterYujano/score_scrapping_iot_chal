@@ -45,6 +45,8 @@ for project_url in project_urls:
 	header = soup.find('div', attrs={'class': 'page-header'})
 	vote_string = header.find('h5').text
 	vote = int(re.sub("[^0-9]", "", vote_string))
+	if vote > 40:
+		print(url + ' => ' + str(vote))
 	votes.append(vote)
 	if 'air-sound-pollution-monitoring-for-sports-and-open-data-use-case' in url:
 		print('[!] our project has: ', vote)
@@ -64,3 +66,8 @@ for vote in votes:
 	sum = sum + vote
 result = sum / len(votes)
 print('average vote number per project : ', result)
+
+
+file = open("votes.txt", "a")
+fichier.write(votes)
+file.close()
