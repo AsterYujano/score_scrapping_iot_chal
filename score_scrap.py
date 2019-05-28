@@ -49,7 +49,9 @@ for project_url in project_urls:
 		print(url + ' => ' + str(vote))
 	votes.append(vote)
 	if 'air-sound-pollution-monitoring-for-sports-and-open-data-use-case' in url:
+		print('-----------------------')
 		print('[!] our project has: ', vote)
+		print('-----------------------')
 
 print('[o] Complete')
 print()
