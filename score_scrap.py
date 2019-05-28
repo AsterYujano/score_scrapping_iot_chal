@@ -67,7 +67,3 @@ for vote in votes:
 result = sum / len(votes)
 print('average vote number per project : ', result)
 
-
-file = open("votes.txt", "a")
-fichier.write(votes)
-file.close()
